@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Sign in";
+}
+
+<div>
+    <h1>Choose login account:</h1>
+    <a class="btn btn-primary" asp-action="AuthLogin" asp-route-type="@AuthType.GoogleAuth"><h5>Google</h5></a>
+    <a class="btn btn-danger" asp-action="AuthLogin" asp-route-type="@AuthType.MicrosoftAuth"><h5>Microsoft</h5></a>
+    <a class="btn btn-dark" asp-action="AuthLogin" asp-route-type="@AuthType.GithubAuth"><h5>GitHub</h5></a>
+</div>

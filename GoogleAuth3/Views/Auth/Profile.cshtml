@@ -1,0 +1,21 @@
+﻿@model UserViewModel
+
+@{
+    ViewData["Title"] = Model.Username;
+}
+
+<div>
+    <label class="col-sm-2 col-form-label" asp-for="Username"></label>
+    <span>@Model.Username</span>
+    <br />
+
+    @if (!String.IsNullOrWhiteSpace(Model.Email))
+    {
+        <label class="col-sm-2 col-form-label" asp-for="Email"></label>
+        <span>@Model.Email</span>
+        <br />
+    }
+
+    <label class="col-sm-2 col-form-label" asp-for="Role"></label>
+    <span>@Model.Role</span>
+</div>
